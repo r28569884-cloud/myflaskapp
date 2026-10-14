@@ -64,7 +64,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                powershell ' & "./deploy.ps1" '
+                bat 'powershell.exe -NoProfile -NonInteractive -ExecutionPolicy RemoteSigned -File deploy.ps1'
             }
         }
     }
